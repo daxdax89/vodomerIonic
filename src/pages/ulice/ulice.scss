@@ -1,0 +1,47 @@
+page-ulice {
+    .item{
+        text-transform: uppercase !important;
+    }
+    #sifra{
+      float: right;
+      text-transform: lowercase;
+    }
+
+    #sifra2{
+      margin: auto;
+      text-align: center;
+      color: gray;
+      font-weight: bold;
+    }
+
+    #levo{
+      text-align: left;
+      float: left;
+      width: 60%;
+    }
+
+    #desno{
+      text-align: right;
+      float: right;
+      width: 90%;
+    }
+
+    #kolona4{
+      text-align: center;
+    }
+
+    #kolona8{
+      padding-top: 5%;
+    }
+
+    ion-col{
+      border-left: 2px solid gray;
+      border-top: 2px solid gray;
+      border-bottom: 2px solid gray;
+      text-align: center;
+    }
+
+    ion-row{
+      border-right: 2px solid gray;
+    }
+}

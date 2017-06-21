@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar color="myDark">
+    <ion-title>Ulice</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <!-- Pokazati sve kao listu -->
+
+  <ion-list>
+    <ion-item (click)="showNames()" *ngFor="let item of dbData">
+      <p><b>{{item.ulica}}</b></p>
+      <!-- <p id="sifra">šifra: {{item.komu}}</p> -->
+      <p id="sifra">šifra: {{substring(item.komu, 4)}}</p>
+
+    </ion-item>
+  </ion-list>
+  <ion-fab bottom right>
+    <button ion-fab (click)="filter()" color="myPrimary2">
+      <ion-icon name="search"></ion-icon>
+  </button>
+  </ion-fab>
+
+  <!-- Pokazati sve u grid -->
+
+  <!-- <ion-grid *ngFor="let item of dbData">
+    <ion-row>
+      <ion-col col-8 id="kolona8"><b>{{item.ulica}}</b></ion-col>
+      <ion-col col-4 id="kolona4">
+        <span id="sifra2">ŠIFRA</span>
+        <span>{{item.komu}}</span>
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+</ion-content>

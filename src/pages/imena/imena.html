@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar color="myDark">
+    <ion-title>Ime Ulice</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item (click)="showUserInfo()" *ngFor="let item of dbData">
+      <p><b>Ime i Prezime</b></p>
+      <p id="sifra">šifra korisnika</p>
+    </ion-item>
+  </ion-list>
+  <ion-fab bottom right>
+    <button ion-fab (click)="filter()" color="myPrimary2">
+      <ion-icon name="search"></ion-icon>
+  </button>
+  </ion-fab>
+</ion-content>
