@@ -52,7 +52,7 @@ export class UlicePage {
     return str;
   }
 
-  showNames(item): void {
+  showNames(item:any): void {
     this.navCtrl.push('ImenaPage', { title: item.ulica });
   }
 }
