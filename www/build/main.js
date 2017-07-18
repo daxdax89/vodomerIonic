@@ -57836,7 +57836,7 @@ var HomePage = (function () {
 }());
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/Users/daxdax89/Development/dev/Vodomer-master/src/pages/home/home.html"*/'<ion-content padding>\n  <ion-input placeholder="Vaš ID"></ion-input>\n  <button ion-button (click)="navigateToStart()" large icon-left color="myPrimary">\n    <ion-icon name="play"></ion-icon>\nNASTAVI</button>\n</ion-content>\n<ion-footer (click)=\'visitMB();\'>\n  <ion-toolbar>\n    <ion-title id="futer">© Micro Business 2017</ion-title>\n  </ion-toolbar>\n</ion-footer>\n'/*ion-inline-end:"/Users/daxdax89/Development/dev/Vodomer-master/src/pages/home/home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"/Users/daxdax89/Development/dev/VodomerIonic/src/pages/home/home.html"*/'<ion-content padding>\n  <ion-input placeholder="Vaš ID"></ion-input>\n  <button ion-button (click)="navigateToStart()" large icon-left color="myPrimary">\n    <ion-icon name="play"></ion-icon>\nNASTAVI</button>\n</ion-content>\n<ion-footer (click)=\'visitMB();\'>\n  <ion-toolbar>\n    <ion-title id="futer">© Micro Business 2017</ion-title>\n  </ion-toolbar>\n</ion-footer>\n'/*ion-inline-end:"/Users/daxdax89/Development/dev/VodomerIonic/src/pages/home/home.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
 ], HomePage);
@@ -76697,7 +76697,7 @@ var MyApp = (function () {
     return MyApp;
 }());
 MyApp = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"/Users/daxdax89/Development/dev/Vodomer-master/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/daxdax89/Development/dev/Vodomer-master/src/app/app.html"*/
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"/Users/daxdax89/Development/dev/VodomerIonic/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/daxdax89/Development/dev/VodomerIonic/src/app/app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]])
 ], MyApp);

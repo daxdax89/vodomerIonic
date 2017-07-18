@@ -11,9 +11,6 @@ import 'rxjs/add/operator/map';
 })
 export class SinhronizacijaPage {
 
-  // sinhronizacijaPage = SinhronizacijaPage;
-  private data: any;
-
   constructor(private navCtrl: NavController, private navParams: NavParams, private http: Http) {
   }
 
