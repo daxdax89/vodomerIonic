@@ -14,7 +14,7 @@ export class UlicePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public httpProvider: HttpProvider, public loadingCtrl: LoadingController) {
     this.loading = this.loadingCtrl.create({
-      content: 'Učitavanje podataka...'
+      content: 'Loading data...'
     });
     this.getdata();
   }
