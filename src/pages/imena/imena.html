@@ -1,13 +1,13 @@
 <ion-header>
   <ion-navbar color="myDark">
-    <ion-title>{{ title }}</ion-title>
+    <ion-title>{{ item.ulica }}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <ion-list>
-    <ion-item (click)="showUserInfo()" *ngFor="let item of dbData">
-      <p><b>Full name</b></p>
+    <ion-item (click)="showUserInfo()">
+      <p><b>{{ item.ime }}</b></p>
       <p id="sifra">user id</p>
     </ion-item>
   </ion-list>
