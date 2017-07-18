@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar color="myDark">
-    <ion-title>Ulice</ion-title>
+    <ion-title>Streets</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -12,7 +12,7 @@
     <ion-item (click)="showNames()" *ngFor="let item of dbData">
       <p><b>{{item.ulica}}</b></p>
       <!-- <p id="sifra">šifra: {{item.komu}}</p> -->
-      <p id="sifra">šifra: {{substring(item.komu, 4)}}</p>
+      <p id="sifra">id: {{substring(item.komu, 4)}}</p>
 
     </ion-item>
   </ion-list>

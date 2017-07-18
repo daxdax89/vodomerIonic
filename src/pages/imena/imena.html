@@ -1,14 +1,14 @@
 <ion-header>
   <ion-navbar color="myDark">
-    <ion-title>Ime Ulice</ion-title>
+    <ion-title>Street name</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <ion-list>
     <ion-item (click)="showUserInfo()" *ngFor="let item of dbData">
-      <p><b>Ime i Prezime</b></p>
-      <p id="sifra">šifra korisnika</p>
+      <p><b>Full name</b></p>
+      <p id="sifra">user id</p>
     </ion-item>
   </ion-list>
   <ion-fab bottom right>
