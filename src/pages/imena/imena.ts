@@ -8,12 +8,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ImenaPage {
 
-  titleBre: any;
+  title: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.titleBre = this.navParams.get('passedData');
-    console.log('tvrd');
-    console.log(this.titleBre);
+    this.title = this.navParams.get('title');
   }
 
   ionViewDidLoad() {

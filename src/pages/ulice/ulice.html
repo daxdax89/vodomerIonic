@@ -9,7 +9,7 @@
   <!-- Pokazati sve kao listu -->
 
   <ion-list>
-    <ion-item (click)="showNames()" *ngFor="let item of dbData">
+    <ion-item (click)="showNames(item)" *ngFor="let item of dbData">
       <p><b>{{item.ulica}}</b></p>
       <!-- <p id="sifra">šifra: {{item.komu}}</p> -->
       <p id="sifra">id: {{substring(item.komu, 4)}}</p>
