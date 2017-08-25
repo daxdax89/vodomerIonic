@@ -1,0 +1,17 @@
+<ion-header>
+	<ion-navbar color="myDark2">
+		<ion-title>Data Download</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content padding>
+	<h4>Please enter region number</h4>
+	<ion-input type="tel" [(ngModel)]="regionName" large text-center placeholder="NAME OF REGION" required></ion-input>
+	<button ion-button (click)='getDataFromServer();' large icon-left color="myPrimary">
+		<ion-icon name="code-download"></ion-icon>
+		GET REGION</button>
+	</ion-content>
+	<ion-footer (click)='visitMB();'>
+		<ion-toolbar>
+			<ion-title id="futer">© Micro Business 2017</ion-title>
+		</ion-toolbar>
+	</ion-footer>

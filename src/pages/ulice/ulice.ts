@@ -14,7 +14,7 @@ export class UlicePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public httpProvider: HttpProvider, public loadingCtrl: LoadingController) {
     this.loading = this.loadingCtrl.create({
-      content: 'Učitavanje podataka...'
+      content: 'Loading data...'
     });
     this.getdata();
   }
@@ -35,6 +35,24 @@ export class UlicePage {
         console.log('getData completed');
       }
     );
+  }
+
+  distinctData() {
+    let lookup = {};
+    let items = this.dbData;
+    let result = [];
+
+   for (let item, i = 0;  item = items(i++);) {
+     let name = item.name;
+
+     if(!(name in lookup)) {
+       lookup[name] = 1;
+       result.push(name);
+
+     }
+   }
+   console.log(result);
+   console.log(name);
   }
 
   substring(str, num) {

@@ -8,7 +8,7 @@
   <ion-list>
     <ion-item (click)="showUserInfo()">
       <p><b>{{ item.ime }}</b></p>
-      <p id="sifra">{{ item.id }}</p>
+      <p id="sifra">{{ item.partner }}</p>
     </ion-item>
   </ion-list>
   <ion-fab bottom right>
@@ -17,3 +17,19 @@
   </button>
   </ion-fab>
 </ion-content>
+<ion-footer>
+    <ion-row>
+      <ion-col col-6>
+        <span>Number of users: 36</span>
+      </ion-col>
+      <ion-col col-2>
+        <ion-icon name="funnel">Sort</ion-icon>
+      </ion-col>
+      <ion-col col-2>
+        <ion-icon name="funnel">Sort</ion-icon>
+      </ion-col>
+      <ion-col col-2>
+        <ion-icon name="funnel">Sort</ion-icon>
+      </ion-col>
+    </ion-row>
+</ion-footer>

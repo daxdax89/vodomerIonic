@@ -1,8 +1,28 @@
 <ion-content padding>
-  <ion-input placeholder="Your ID"></ion-input>
-  <button ion-button (click)="navigateToStart()" large icon-left color="myPrimary">
-    <ion-icon name="play"></ion-icon>
-CONTINUE</button>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+        <ion-icon name="log-in" color="myPrimary" id="bigIcon"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <ion-input placeholder="Username"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <ion-input placeholder="Password"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <button ion-button (click)="navigateToStart()" large icon-left color="myPrimary">
+    <ion-icon name="log-in"></ion-icon>
+Login</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
 <ion-footer (click)='visitMB();'>
   <ion-toolbar>

@@ -1,0 +1,32 @@
+page-get-data {
+  text-align: center;
+  ion-input {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 45%;
+  }
+
+  ion-input [placeholder]{
+    text-align: center;
+  }
+
+    button{
+    // margin-top: 20% !important;
+    font-weight: bold;
+    margin: 5%!important;
+  }
+  h4{
+    font-weight: normal;
+    color: gray;
+    margin-top: 10% !important;
+  }
+
+  #futer {
+    font-size: 10px;
+    text-align: center;
+    width: auto;
+  }
+}
