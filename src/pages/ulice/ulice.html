@@ -9,10 +9,10 @@
   <!-- Show everything as list -->
 
   <ion-list>
-    <ion-item (click)="showNames(item)" *ngFor="let item of dbData">
-      <p><b>{{item.ulica}}</b></p>
+    <ion-item (click)="showHouseholds(street)" *ngFor="let street of streets">
+      <p><b>{{street.name}}</b></p>
       <!-- <p id="sifra">šifra: {{item.komu}}</p> -->
-      <p id="sifra">id: {{substring(item.komunsifra, 4)}}</p>
+      <!-- <p id="sifra">id: {{substring(item.komunsifra, 4)}}</p> -->
 
     </ion-item>
   </ion-list>

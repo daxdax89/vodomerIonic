@@ -9,7 +9,7 @@ import { HttpProvider } from '../../providers/http/http';
 })
 
 export class UlicePage {
-  dbData: any;
+  streets: any[];
   loading: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public httpProvider: HttpProvider, public loadingCtrl: LoadingController) {
@@ -23,12 +23,12 @@ export class UlicePage {
     this.loading.present();
     this.httpProvider.getJsonData().subscribe(
       result => {
-        this.dbData = result;
-        console.log("Success : " + this.dbData);
+        this.streets = result;
+        console.log("Success : ", this.streets);
 
       },
       err => {
-        console.error("Error : " + err);
+        console.error("Error : ", err);
       },
       () => {
         this.loading.dismiss();
@@ -37,23 +37,6 @@ export class UlicePage {
     );
   }
 
-  distinctData() {
-    let lookup = {};
-    let items = this.dbData;
-    let result = [];
-
-   for (let item, i = 0;  item = items(i++);) {
-     let name = item.name;
-
-     if(!(name in lookup)) {
-       lookup[name] = 1;
-       result.push(name);
-
-     }
-   }
-   console.log(result);
-   console.log(name);
-  }
 
   substring(str, num) {
     var result = " ";
@@ -70,7 +53,8 @@ export class UlicePage {
     return str;
   }
 
-  showNames(item:any): void {
-    this.navCtrl.push('ImenaPage', { item: item });
+  showHouseholds(street:any): void {
+    this.navCtrl.push('ImenaPage', { street: street });
   }
+
 }
