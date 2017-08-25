@@ -6,23 +6,23 @@
 
 <ion-content padding>
 
-  <!-- Pokazati sve kao listu -->
+  <!-- Show everything as list -->
 
   <ion-list>
     <ion-item (click)="showNames(item)" *ngFor="let item of dbData">
       <p><b>{{item.ulica}}</b></p>
       <!-- <p id="sifra">šifra: {{item.komu}}</p> -->
-      <p id="sifra">id: {{substring(item.komu, 4)}}</p>
+      <p id="sifra">id: {{substring(item.komunsifra, 4)}}</p>
 
     </ion-item>
   </ion-list>
   <ion-fab bottom right>
     <button ion-fab (click)="filter()" color="myPrimary2">
       <ion-icon name="search"></ion-icon>
-  </button>
+    </button>
   </ion-fab>
 
-  <!-- Pokazati sve u grid -->
+  <!-- Show everything as grid -->
 
   <!-- <ion-grid *ngFor="let item of dbData">
     <ion-row>

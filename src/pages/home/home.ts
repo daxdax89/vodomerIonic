@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
+import { LocationAccuracy } from '@ionic-native/location-accuracy';
 
 @IonicPage()
 @Component({
@@ -8,7 +9,15 @@ import { IonicPage, NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private locationAccuracy: LocationAccuracy) {
+    this.locationAccuracy.canRequest().then((canRequest: boolean) => {
+      if (canRequest) {
+        this.locationAccuracy.request(this.locationAccuracy.REQUEST_PRIORITY_HIGH_ACCURACY).then(
+          () => console.log('Request succesful'),
+          error => console.log('Error requesting location permissions', error)
+        );
+      }
+    });
 
   }
 
@@ -19,4 +28,7 @@ export class HomePage {
   navigateToStart(): void {
     this.navCtrl.push('StartPage');
   }
+
+
+
 }

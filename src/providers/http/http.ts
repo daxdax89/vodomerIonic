@@ -11,6 +11,6 @@ export class HttpProvider {
 
   getJsonData() {
     // return this.http.get('http://localhost:8888/infodata/Data.php').map(res => res.json());
-    return this.http.get('assets/data/data.json').map(res => res.json());
+    return this.http.get('assets/data/dataTest.json').map(res => res.json());
   }
 }

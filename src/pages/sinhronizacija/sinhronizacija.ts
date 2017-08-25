@@ -19,6 +19,7 @@ export class SinhronizacijaPage {
   }
 
   getData() {
+    this.navCtrl.push('GetDataPage');
     console.log('gettingData complete')
   }
 

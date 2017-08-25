@@ -37,6 +37,24 @@ export class UlicePage {
     );
   }
 
+  distinctData() {
+    let lookup = {};
+    let items = this.dbData;
+    let result = [];
+
+   for (let item, i = 0;  item = items(i++);) {
+     let name = item.name;
+
+     if(!(name in lookup)) {
+       lookup[name] = 1;
+       result.push(name);
+
+     }
+   }
+   console.log(result);
+   console.log(name);
+  }
+
   substring(str, num) {
     var result = " ";
     for (var i = 0; i < num; i++) {
