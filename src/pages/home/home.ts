@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { IonicPage, NavController, Platform } from 'ionic-angular';
 import { LocationAccuracy } from '@ionic-native/location-accuracy';
 
 @IonicPage()
@@ -9,15 +9,18 @@ import { LocationAccuracy } from '@ionic-native/location-accuracy';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, private locationAccuracy: LocationAccuracy) {
-    this.locationAccuracy.canRequest().then((canRequest: boolean) => {
-      if (canRequest) {
-        this.locationAccuracy.request(this.locationAccuracy.REQUEST_PRIORITY_HIGH_ACCURACY).then(
-          () => console.log('Request succesful'),
-          error => console.log('Error requesting location permissions', error)
-        );
-      }
-    });
+  constructor(public navCtrl: NavController, private platform: Platform, private locationAccuracy: LocationAccuracy) {
+    if(this.platform.is('cordova'))  {
+      this.locationAccuracy.canRequest().then((canRequest: boolean) => {
+       if (canRequest) {
+         this.locationAccuracy.request(this.locationAccuracy.REQUEST_PRIORITY_HIGH_ACCURACY).then(
+           () => console.log('Request succesful'),
+           error => console.log('Error requesting location permissions', error)
+         );
+       }
+     });
+    }
+
 
   }
 

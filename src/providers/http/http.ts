@@ -22,7 +22,7 @@ export class HttpProvider {
             if(unique_streets.indexOf(streetname) === -1) {
               unique_streets.push(streetname);
 
-              let new_str = { name: streetname, households: [ street ] };
+              let new_str = { name: streetname, komunsifra: street.komunsifra, households: [ street ] };
               mapped_streets.push(new_str);
             }
             else {
