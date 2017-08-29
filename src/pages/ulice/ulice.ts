@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, LoadingController, Content } from 'ionic-angular';
 import { HttpProvider } from '../../providers/http/http';
 
 @IonicPage()
@@ -11,8 +11,15 @@ import { HttpProvider } from '../../providers/http/http';
 export class UlicePage {
   streets: any[];
   loading: any;
+  searching: boolean = false;
+  @ViewChild(Content) content: Content; // make ion-content accessible so we can recalculate it's height when adding/hiding searchbar
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public httpProvider: HttpProvider, public loadingCtrl: LoadingController) {
+
+  constructor(public navCtrl: NavController,
+    public navParams: NavParams,
+    public httpProvider: HttpProvider,
+    public loadingCtrl: LoadingController
+  ) {
     this.loading = this.loadingCtrl.create({
       content: 'Loading data...'
     });
@@ -35,6 +42,11 @@ export class UlicePage {
         console.log('getData completed');
       }
     );
+  }
+
+  toggleSearchbar() {
+    this.searching =! this.searching;
+    this.content.resize();
   }
 
 

@@ -1,7 +1,16 @@
 <ion-header>
   <ion-navbar color="myDark">
     <ion-title>Streets</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="toggleSearchbar()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
+
+  <ion-searchbar *ngIf="searching" placeholder="Start searching">
+  </ion-searchbar>
+
 </ion-header>
 
 <ion-content padding>
@@ -12,15 +21,9 @@
     <ion-item (click)="showHouseholds(street)" *ngFor="let street of streets">
       <p><b>{{street.name}}</b></p>
       <!-- <p id="sifra">šifra: {{item.komu}}</p> -->
-      <!-- <p id="sifra">id: {{substring(item.komunsifra, 4)}}</p> -->
-
+      onic <p id="sifra">id: {{substring(street.komunsifra, 4)}}</p>
     </ion-item>
   </ion-list>
-  <ion-fab bottom right>
-    <button ion-fab (click)="filter()" color="myPrimary2">
-      <ion-icon name="search"></ion-icon>
-    </button>
-  </ion-fab>
 
   <!-- Show everything as grid -->
 
