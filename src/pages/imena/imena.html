@@ -1,7 +1,15 @@
 <ion-header>
   <ion-navbar color="myDark">
     <ion-title>{{ street?.name }}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="toggleSearchbar()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
+
+  <ion-searchbar *ngIf="searching" placeholder="Start searching">
+  </ion-searchbar>
 </ion-header>
 
 <ion-content padding>
@@ -11,25 +19,20 @@
       <p id="sifra">{{ household.partner }}</p>
     </ion-item>
   </ion-list>
-  <ion-fab bottom right>
-    <button ion-fab (click)="filter()" color="myPrimary2">
-      <ion-icon name="search"></ion-icon>
-  </button>
-  </ion-fab>
 </ion-content>
 <ion-footer>
-    <ion-row>
-      <ion-col col-6>
-        <span>Number of users: {{ street?.households.length }}</span>
-      </ion-col>
-      <ion-col col-2>
-        <ion-icon name="funnel">Sort</ion-icon>
-      </ion-col>
-      <ion-col col-2>
-        <ion-icon name="funnel">Sort</ion-icon>
-      </ion-col>
-      <ion-col col-2>
-        <ion-icon name="funnel">Sort</ion-icon>
-      </ion-col>
-    </ion-row>
+  <ion-row>
+    <ion-col col-6>
+      <span>Number of users: {{ street?.households.length }}</span>
+    </ion-col>
+    <ion-col col-2>
+      <ion-icon name="funnel">Sort</ion-icon>
+    </ion-col>
+    <ion-col col-2>
+      <ion-icon name="funnel">Sort</ion-icon>
+    </ion-col>
+    <ion-col col-2>
+      <ion-icon name="funnel">Sort</ion-icon>
+    </ion-col>
+  </ion-row>
 </ion-footer>

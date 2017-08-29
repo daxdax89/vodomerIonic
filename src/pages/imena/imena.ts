@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, Content } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -7,10 +7,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'imena.html',
 })
 export class ImenaPage {
-
   street: any;
+  searching: boolean = false;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  @ViewChild(Content) content: Content; // make ion-content accessible so we can recalculate it's height when adding/hiding searchbar
+
+
+  constructor(public navCtrl: NavController,
+    public navParams: NavParams,
+  ) {
     this.street = this.navParams.get('street');
   }
 
@@ -18,7 +23,12 @@ export class ImenaPage {
 
   }
 
-  showUserInfo(){
+  showUserInfo() {
 
+  }
+
+  toggleSearchbar() {
+    this.searching = !this.searching;
+    this.content.resize();
   }
 }
