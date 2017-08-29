@@ -8,7 +8,7 @@
     </ion-buttons>
   </ion-navbar>
 
-  <ion-searchbar *ngIf="searching" placeholder="Start searching">
+  <ion-searchbar *ngIf="searching" shouldShowCancel="true" (ionInput)="getStreets($event)" placeholder="Start searching">
   </ion-searchbar>
 
 </ion-header>
@@ -18,12 +18,16 @@
   <!-- Show everything as list -->
 
   <ion-list>
-    <ion-item (click)="showHouseholds(street)" *ngFor="let street of streets">
+    <ion-item (click)="showHouseholds(street)" *ngFor="let street of filtered_streets">
       <p><b>{{street.name}}</b></p>
       <!-- <p id="sifra">šifra: {{item.komu}}</p> -->
       <p id="sifra">id: {{substring(street.komunsifra, 4)}}</p>
     </ion-item>
   </ion-list>
+
+  <p *ngIf="!fetchingData && filtered_streets.length < 1">
+    No results I'm afraid my friend...
+  </p>
 
   <!-- Show everything as grid -->
 
